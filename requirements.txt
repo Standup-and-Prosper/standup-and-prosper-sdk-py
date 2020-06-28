@@ -2,4 +2,4 @@ certifi >= 14.05.14
 six >= 1.10
 setuptools >= 21.0.0
 urllib3 >= 1.15.1
-authress-sdk >= 1.0.25
+authress-sdk >= 1.0.40

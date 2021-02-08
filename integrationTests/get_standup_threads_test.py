@@ -15,6 +15,8 @@ class GetStandupThreadsTest(unittest.TestCase):
     pass
 
   def get_standup_threads(self):
+  # Enable test
+  # def test_get_standup_threads(self):
     """Test case for getting standup threads
 
     Get the standup threads

@@ -1,7 +1,7 @@
 import os
 from setuptools import setup, find_packages
 
-REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil", "authress-sdk >= 1.0.40"]
+REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil", "authress-sdk >= 1.0.44"]
 
 # To install the library, run the following
 #

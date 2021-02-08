@@ -4,6 +4,7 @@
 from __future__ import absolute_import
 
 import re
+from datetime import datetime
 
 # python 2 and python 3 compatibility library
 import six
@@ -17,7 +18,7 @@ class StandupsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def get_standup_threads(self, team_id, standup_id, **kwargs):
+    def get_standup_threads(self, team_id, standup_id, latest_scheduled_date=None, **kwargs):
         """Get the recent threads for a standup
 
         Includes the original configuration information.
@@ -29,19 +30,20 @@ class StandupsApi(object):
         :param async_req bool
         :param str team_id: The unique identifier for the workspace team
         :param str standup_id: The unique identifier for the standup
+        :param datetime latest_scheduled_date: Fetch only threads before this ISO 8601 date (inclusive)
         :return: ThreadCollection
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_standup_threads_with_http_info(team_id, standup_id, **kwargs)
+            return self.get_standup_threads_with_http_info(team_id, standup_id, latest_scheduled_date, **kwargs)
         else:
-            (data) = self.get_standup_threads_with_http_info(team_id, standup_id, **kwargs)
+            (data) = self.get_standup_threads_with_http_info(team_id, standup_id, latest_scheduled_date, **kwargs)
             return data
 
-    def get_standup_threads_with_http_info(self, team_id, standup_id, **kwargs):
-        all_params = ['team_id', 'standup_id']
+    def get_standup_threads_with_http_info(self, team_id, standup_id, latest_scheduled_date, **kwargs):
+        all_params = ['team_id', 'standup_id', 'latest_scheduled_date']
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -68,7 +70,9 @@ class StandupsApi(object):
           "standupId": params['standup_id'],
         }
 
-        query_params = []
+        query_params = {}
+        if (latest_scheduled_date is not None):
+          query_params['latestScheduledDate'] = latest_scheduled_date.strftime("%Y-%m-%d")
 
         header_params = {}
 

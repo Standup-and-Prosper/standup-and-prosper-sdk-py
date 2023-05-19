@@ -22,7 +22,7 @@ setup(
   version = VERSION,
   description = 'The Standup & Prosper SDK for interacting with standups programmatically.',
   author = 'Rhosys Developers',
-  author_email = 'developers@teaminator.io',
+  author_email = 'developers@standup-and-prosper.com',
   url = 'https://github.com/Teaminator/standup-and-prosper-sdk.py.git',
   include_package_data = True,
   install_requires=REQUIRES,

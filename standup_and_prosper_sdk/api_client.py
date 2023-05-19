@@ -31,7 +31,7 @@ class ApiClient(object):
     }
 
     def __init__(self, access_key=None):
-        self.host = "https://standup-api.teaminator.io"
+        self.host = "https://api.standup-and-prosper.com"
         self.authressClient = AuthressClient(None, access_key)
         self.pool = ThreadPool()
         self.rest_client = rest.RESTClientObject()

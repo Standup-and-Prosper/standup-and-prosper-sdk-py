@@ -1,7 +1,7 @@
 # Standup & Prosper SDK
 Standup & Prosper SDK for Python.
 
-[![NuGet version](https://badge.fury.io/py/standup-and-prosper-sdk.svg)](https://badge.fury.io/py/standup-and-prosper-sdk) [![Build Status](https://travis-ci.com/Teaminator/standup-and-prosper-sdk.py.svg?branch=release%2F1.0)](https://travis-ci.com/github/Teaminator/standup-and-prosper-sdk.py)
+[![NuGet version](https://badge.fury.io/py/standup-and-prosper-sdk.svg)](https://badge.fury.io/py/standup-and-prosper-sdk) [![Build Status](https://travis-ci.com/Standup-And-Prosper/standup-and-prosper-sdk.py.svg?branch=release%2F1.0)](https://travis-ci.com/github/Standup-And-Prosper/standup-and-prosper-sdk.py)
 
 This is the Standup & Prosper SDK used to integrate with programmatic standups at https://standup-and-prosper.com.
 

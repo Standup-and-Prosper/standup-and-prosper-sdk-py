@@ -23,7 +23,7 @@ setup(
   description = 'The Standup & Prosper SDK for interacting with standups programmatically.',
   author = 'Rhosys Developers',
   author_email = 'developers@standup-and-prosper.com',
-  url = 'https://github.com/Teaminator/standup-and-prosper-sdk.py.git',
+  url = 'https://github.com/Standup-And-Prosper/standup-and-prosper-sdk.py.git',
   include_package_data = True,
   install_requires=REQUIRES,
   packages = find_packages(exclude=['tests', 'integrationTests']),
